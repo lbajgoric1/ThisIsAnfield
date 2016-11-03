@@ -24,6 +24,7 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
     ~ meni.css (fajl koji sadrži css kod vezan za prikaz menija na html stranicama)
     ~ sadrzaj.css (fajl koji sadrži css kod vezan za prikaz sadrzaja na html stranicama)
   + Mockup folder - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju
+  
     ~ Browser folder
       1. Pocetna.png
       2. Takmicenja.png
