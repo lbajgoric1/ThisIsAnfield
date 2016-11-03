@@ -1,0 +1,211 @@
+*{
+	box-sizing: border-box;
+}
+
+.sadrzaj {
+	background-color: rgba(0, 0, 0, 0.7);
+	float:left;
+	margin-left: 3%;
+    margin-right: 3%;
+	width: 94%;
+    max-width: 100%;
+	
+	font-size: 1.5vw;
+	color: white;
+	font-weight: bold;
+}
+
+.red{
+	font-size: 1.5vw;
+	font-weight: normal;
+	padding: 1%;
+	width:100%;
+	float:left;
+	min-height: 1px;
+	text-align: center;
+}
+
+.red.naslovNovosti {
+	font-size: 2vw;
+	font-weight: bold;
+	background-color: black;
+}
+
+.red.poravnat {
+	text-align: justify;
+}
+
+.kolona{
+	margin-left: 2%;
+	margin-right: 2%;
+	display: inline-block; 
+	float: left;
+	min-height: 20px;
+}
+
+.kolona:first-child{
+	margin-left: 0px;
+}
+
+.kolona:last-child{
+	margin-right: 0px;
+}
+
+.kolona.jedan{
+	width: 22%;
+}
+
+.kolona.dva{
+	width: 48%;
+}
+
+.kolona.dva.imeNovosti {
+	background-color: black;
+}
+
+.kolona.tri{
+	width: 74%;
+}
+
+.kolona.dva.poravnat {
+	text-align: justify;
+}
+
+.kolona.cetri{
+	width: 100%;
+}
+
+img.slika {
+	width:100%;
+	min-width:20px;
+}
+
+
+.tabela {
+	font-size: 1.5vw;
+	color: white;
+	font-weight: normal;
+}
+
+th {
+	text-align: left;
+	background-color: gray;
+}
+
+th.info {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2vw;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1px;
+}
+
+.tekst{
+	text-align: left;
+	font-size: 1.6vw;
+}
+
+.tekst.anfield{
+	text-align: justify;
+}
+
+.comboBox{
+	float: right;
+	width: 70%;
+	font-size: 1.5vw;
+}
+
+img.slika.igrac {
+	width:50%;
+	float: left;
+	padding: 2%;
+}
+
+.oIgracu{
+	width:50%;
+	float: right;
+	padding: 2%;
+	text-align:justify;
+}
+
+form.posaljiPoruku {
+	text-align: left;
+}
+
+input.unos {
+	width: 70%;
+	float: right;
+}
+
+
+input.potvrdi {
+	float: right;
+}
+
+textarea.unos{
+	width: 100%;
+}
+
+@media screen and (max-width: 600px){
+	.red, .kolona, .sadrzaj {
+		float: none;
+	}
+	.kolona.dva {
+		width: 100%;
+		padding: 2%;
+	}
+	.kolona {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.kolona.jedan.anfield{
+		float:none;
+		width: 100%;
+		padding: 2%;
+	}
+	.kolona.tri.anfield{
+		width: 100%;
+	}
+	.red {
+		padding: 0;
+	}
+	.tabela {
+		width: 444%;  
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.kolona.jedan.centriran {
+		margin-left: 0%;
+	}
+	.tekst{
+		font-size: 3vw;
+	}
+	.tekst.anfield{
+		font-size: 3vw;
+		padding: 2%;
+	}
+	.oIgracu, .red.poravnat.takmicenje,
+	.kolona.dva.poravnat.takmicenje, .tabela, th.info, 
+	.red.naslovNovosti	{
+		font-size: 4vw;
+	}
+	
+	.comboBox, form.posaljiPoruku, .red.poravnat	{
+		font-size: 3vw;
+	}
+	
+	.kolona.jedan.oklubu{
+		float:left;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	.tabela{
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}

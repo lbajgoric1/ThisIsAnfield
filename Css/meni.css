@@ -1,0 +1,66 @@
+body {
+	background: url("https://static-secure.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/9/1397052795721/Liverpool-011.jpg") no-repeat center center fixed; 
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+.naslov {
+	font-size: 4vw;
+	font-family: "Arial";
+	color: white;
+	font-weight: bold;
+	text-shadow: 5px 5px 10px #000, 
+               3px 3px 5px #31a003;
+	
+	float: left;
+	margin-left: 33%;
+	max-width: 100%;
+}
+
+ul.meni {
+    list-style-type: none;
+    margin: 0;
+	margin-left: 3%;
+    margin-right: 3%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	float:left;
+	width: 94%;
+    max-width: 100%;
+}
+
+ul.meni li { 
+	float: left;
+}
+
+ul.meni li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 2vw;
+}
+
+ul.meni li a:hover:not(.active) {
+	background-color: #f10016;
+}
+
+ul.meni li a.active {
+	background-color: #4CAF50;
+}
+
+ul.meni li.right {
+	float: right;
+}
+
+@media screen and (max-width: 600px){
+    ul.meni li.right,
+    ul.meni li {
+		float: none;
+	}
+	ul.meni li a {
+		font-size: 3vw;
+	}
+}
