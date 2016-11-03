@@ -4,7 +4,7 @@
 
 Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne informacije o klubu, kao i klupskim igračima, stadionu, ...
 
-Spirala 1:
+# Spirala 1:
 - Kreirane su skice kako će se stranice prikazati na pretraživačima kao i mobilnim uređajima
 - Kreirane su html stranice koje su:
     + stilizirane css-om; 
@@ -30,6 +30,7 @@ Spirala 1:
       3. OKlubu.png
       4. Momcad.png
       5. OAnfieldu.png
+      
     ~ Mobile folder
       1. Pocetna.png
       2. Takmicenja.png
