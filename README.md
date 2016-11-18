@@ -38,4 +38,5 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
       3. O klubu.png
       4. Momcad.png
       5. Anfield.png
-      
+     
+  + Slike folder - sadrži sve slike koje su potrebne da bi se prikazale stranice
