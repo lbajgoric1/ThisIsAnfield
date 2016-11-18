@@ -153,6 +153,35 @@ textarea.unos{
 	width: 100%;
 }
 
+#greska {
+	color: red;
+	font-weight: bold;
+}
+
+#fieldSet {
+	display: none;
+	width: 100%;
+	text-align: justify;
+}
+
+#velikiDiv {
+	text-align: center;
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0; left: 0; width: 100%; height: 100%;
+	background-color: rgba(100,100,100, 0.5);
+	max-width: 100%;
+}
+
+#velikaSlika{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+
 @media screen and (max-width: 600px){
 	.red, .kolona, .sadrzaj {
 		float: none;
@@ -170,7 +199,7 @@ textarea.unos{
 		width: 100%;
 		padding: 2%;
 	}
-	.kolona.tri.anfield{
+	.kolona.tri.anfield, .dropdown{
 		width: 100%;
 	}
 	.red {
@@ -207,5 +236,8 @@ textarea.unos{
 	}
 	.tabela{
 		background-color: rgba(0, 0, 0, 0.7);
+	}
+	.kolona.jedan.galerija {
+		width: 75%;
 	}
 }
