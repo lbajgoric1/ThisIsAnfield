@@ -4,7 +4,7 @@
 
 Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne informacije o klubu, kao i klupskim igračima, stadionu, ...
 
-# Spirala 1:
+# &#x1F4D7;Spirala 1: 
 - Kreirane su skice kako će se stranice prikazati na pretraživačima kao i mobilnim uređajima
 - Kreirane su html stranice koje su:
     + stilizirane css-om; 
@@ -13,30 +13,16 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
     + stranice sadrže html forme
     + svaka stranica sadrži meni koji je funkcionalan;
     + konzistentne, sa poravnatim elementima.
-- Lista fajlova:
-  + Html folder - sadrži html stranice
-    ~ pocetna.html
-    ~ takmicenja.html
-    ~ oKlubu.html
-    ~ momcad.html
-    ~ anfield.html
-  + Css folder - sadrži css fajlove 
-    ~ meni.css (fajl koji sadrži css kod vezan za prikaz menija na html stranicama)
-    ~ sadrzaj.css (fajl koji sadrži css kod vezan za prikaz sadrzaja na html stranicama)
-  + Mockup folder - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju
-  
-    ~ Browser folder
-      1. Pocetna.png
-      2. Takmicenja.png
-      3. OKlubu.png
-      4. Momcad.png
-      5. OAnfieldu.png
-      
-    ~ Mobile folder
-      1. Pocetna.png
-      2. Takmicenja.png
-      3. O klubu.png
-      4. Momcad.png
-      5. Anfield.png
-     
-  + Slike folder - sadrži sve slike koje su potrebne da bi se prikazale stranice
+    
+# &#x1F4D8;Spirala 2:
+- Polja na formi na stranici <i> anfield.html </i> ima JavaScript validaciju. Ostale forme (na stranici <i> takmicenja.html </i> i <i> momcad.html</i>) su funkcionalne. <b> </b>
+- Kreiran je dropdown meni koristeći JavaScript, tako da stavka <i>Takmičenja </i> i <i> Momčad </i>na glavnom meniju sadrže dodatne podstranice.
+- Kreirana je galerija slika.
+- Koristeži Ajax podstranice se učitavaju bez reload-a cijele stranice.
+
+# &#x1F53B;Lista fajlova:
+  + <b>Html folder</b> - sadrži html stranice <br>
+  + <b>Css folder</b> - sadrži css fajlove<br>
+  + <b>JavaScript folder</b> - sadrži js fajlove <br>
+  + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
+  + <b>Slike folder</b> - sadrži sve slike koje su potrebne da bi se prikazale stranice<br>
