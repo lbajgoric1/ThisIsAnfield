@@ -26,3 +26,6 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
   + <b>JavaScript folder</b> - sadrži js fajlove <br>
   + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
   + <b>Slike folder</b> - sadrži sve slike koje su potrebne da bi se prikazale stranice<br>
+  
+# &#x1F534;Bug
+  + Kada se odaberu <i>Takmičenja</i> i <i>Momčad</i> stavka na meniju prikažu se oba pripadajuća padajuća menija. 
