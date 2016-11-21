@@ -17,7 +17,7 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
 # &#x1F4D8;Spirala 2:
 - Polja na formi na stranici <i> anfield.html </i> ima JavaScript validaciju. Ostale forme (na stranici <i> takmicenja.html </i> i <i> momcad.html</i>) su funkcionalne. <b> </b>
 - Kreiran je dropdown meni koristeći JavaScript, tako da stavka <i>Takmičenja </i> i <i> Momčad </i>na glavnom meniju sadrže dodatne podstranice.
-- Kreirana je galerija slika.
+- Kreirana je galerija slika koristeći JavaScript.
 - Koristeži Ajax podstranice se učitavaju bez reload-a cijele stranice.
 
 # &#x1F53B;Lista fajlova:
