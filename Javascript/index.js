@@ -1,4 +1,4 @@
-function ucitajStranicu(url){
+function ucitajStranicu(url, id){
 	var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function() {// Anonimna funkcija
 		if (ajax.readyState == 4 && ajax.status == 200)
@@ -19,12 +19,12 @@ function ucitajStranicu(url){
 				ind=1;
 			}
 			
-			if(url==="sezona1314.html" || url==="sezona1415.html"){
+			if(url==="sezona1314.php" || url==="sezona1415.php"){
 				document.getElementById("takmicenja.html").style.backgroundColor = "#4CAF50";
 				ind=1;
 			}
-			if(ind==0) {
-				document.getElementById(url).style.backgroundColor = "#4CAF50";
+			if(ind==0 && id!="linkLogin") {
+				document.getElementById(id).style.backgroundColor = "#4CAF50";
 			}
 			
 		}

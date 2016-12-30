@@ -1,29 +1,32 @@
 function golmani(){
 	var comboboxGolmani = document.getElementById("comboGolmani");
 	var odabraniGolman = comboboxGolmani.options[comboboxGolmani.selectedIndex].value;
+	prikaziTekstGolman(odabraniGolman);
+	prikaziSlikuGolman(odabraniGolman);
+}
+
+function prikaziTekstGolman(odabraniGolman){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("tekstGolman").innerHTML = this.responseText;
+		}
+	};
+	xmlhttp.open("GET", "../Php/prikaziTekstGolman.php?tip=" + odabraniGolman, true);
+	xmlhttp.send();
 	
-	if (odabraniGolman==="LorisKarius"){
-		document.getElementById("slikaGolman").src="../Slike/loris.jpg"; 
-		document.getElementById("tekstGolman").innerHTML = "Loris Karijus (rođen 22 juna 1993.) je njemački nogometaš, \
-						koji trenutno igra za Liverpool. Debitovao je za \
-						FC Mainz 05 1. decembra 2012. protiv Hanovera. \
-						U 2015-2016 sezone izabran je za trećeg najboljeg golmana u Bundesligi. \
-						Za Liverpool je potpisao u maju 2016. godine.";
-	}
+}
+
+function prikaziSlikuGolman(odabraniGolman){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("slikaGolman").src = this.responseText;
+		}
+	};
+	xmlhttp.open("GET", "../Php/prikaziSlikuGolman.php?tip=" + odabraniGolman, true);
+	xmlhttp.send();
 	
-	else if (odabraniGolman==="AlexManninger"){
-		document.getElementById("slikaGolman").src="../Slike/AlexManninger.jpg"; 
-		document.getElementById("tekstGolman").innerHTML ="Alexander Manninger (Salzburg, 4. lipnja 1977.), \
-						austrijski nogometaš. Manninger igra za Liverpool. Za austrijsku reprezentaciju je igrao \
-						deset godina i sakupio preko 30 utakmica.";
-	}
-	
-	else {
-		document.getElementById("slikaGolman").src="../Slike/SimonMignolet.jpg";
-		document.getElementById("tekstGolman").innerHTML ="Simon Luc Hildebert Mignolet born 6 March 1988) \
-						is a Belgian professional footballer who plays as a goalkeeper for Premier League \
-						club Liverpool and the Belgium national team.";
-	}
 }
 
 function obrambeni(){

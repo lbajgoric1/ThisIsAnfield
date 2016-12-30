@@ -72,7 +72,7 @@
 }
 
 .kolona.cetri{
-	width: 100%;
+	width: 96%;
 }
 
 img.slika {
@@ -181,6 +181,37 @@ textarea.unos{
 	max-width: 100%;
 }
 
+#linkLogin{
+	color: blue;
+	float: left;
+	margin-left: 14%;
+	font-size: 2.2vw;
+}
+
+#linkLogout{
+	color: blue;
+	float: right;
+	margin-right: 5%;
+	font-size: 2.2vw;
+}
+
+#uspjesno{
+	color: green;
+	font-weight: bold;
+	font-size: 2.2vw;
+}
+
+.nazadBtn{
+	float: left;
+}
+
+.akcijaBtn{
+	float:right;
+}
+
+#livesearch{
+	text-align:left;
+}
 
 @media screen and (max-width: 600px){
 	.red, .kolona, .sadrzaj {

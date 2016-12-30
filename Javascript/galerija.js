@@ -13,7 +13,7 @@
 	// }
 // };
 
-function prikazi(id) {
+function prikaziSliku(id) {
 	var slika = document.getElementById(id);
 	if (slika.requestFullscreen) {
 	  slika.requestFullscreen();

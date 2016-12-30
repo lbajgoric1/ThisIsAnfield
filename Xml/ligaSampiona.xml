@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ligaSampiona>
+	<tekst>
+		Prvak: 1977, 1978, 1981, 1984, 2005.
+	</tekst>
+	<slike>
+		<slika1>
+			../Slike/championsL1.jpg
+		</slika1>
+		<slika2>
+			../Slike/championsL2.jpg
+		</slika2>
+		<slika3>
+			../Slike/championsL3.jpg
+		</slika3>
+	</slike>
+</ligaSampiona>

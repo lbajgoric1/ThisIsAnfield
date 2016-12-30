@@ -18,56 +18,37 @@
 			</div>
 		</div>
 	
-		<div class="red pocetna">
-			<div class="kolona dva">
-				<div class="red naslovNovosti">
-					Jürgen Klopp nominiran za FIFA trenera godine
-				</div>
-				
-				<div class="red poravnat">
-					Menadžer Liverpoola Jürgen Klopp je ušao u uži izbor za trenera 
-					FIFA nagradu godine za 2016. godine. Njemac, koji je preuzeo 
-					uzde na Anfieldu u oktobru 2015. godine, vodio je Reds u finale  
-					Lige Kupu i Lige Evrope.
-				</div>
-			
-				
-			</div>
-			<div class="kolona dva">
-				<div class="red naslovNovosti">
-					Liverpool potvrdio Danny Ings mora na operaciju koljena
-				</div>
-				
-				<div class="red poravnat">
-					Liverpool Football Club je potvrdio da Danny Ings mora na operaciju 
-					zbog povrede koljena usljed udara koji je zadobio u desnom koljenu tokom EFL Cupa
-					u četvrtom krugu, u meču protiv Tottenham Hotspura koji je odigran prošle sedmice.
-				</div>
-			</div>
-		</div>
-		
-		<div class="red pocetna">
-			<div class="kolona dva">
-				<div class="red naslovNovosti">
-					Novost3
-				</div>
-				
-				<div class="red">
-					Sadržaj novosti3
-				</div>
-			
-				
-			</div>
-			<div class="kolona dva">
-				<div class="red naslovNovosti">
-					Novost4
-				</div>
-				
-				<div class="red">
-					Sadržaj novosti4
-				</div>
-			</div>
-		</div>
+		<?php 
+		    
+            $_XML = simplexml_load_file("../Xml/pocetna.xml");
+				$brojac = 0; 
+				foreach($_XML->novost as $n)
+				{
+					$prikazi = true;
+					if ($brojac%2==0) { 
+						?>
+						<div class="red pocetna">
+						<?php 
+					}
+		?>
+					<div class="kolona dva">
+						<div class="red naslovNovosti">
+							<?php echo $n->naslov; ?>
+						</div>
+						
+						<div class="red poravnat">
+							<?php echo $n->sadrzaj; $brojac = $brojac + 1; ?>
+						</div>
+					</div>
+				<?php 
+					if ($prikazi){
+				?>	
+						</div>
+				<?php> $prikazi = false; 
+					}
+				}
+				?>
+			?>
 	</body>
 
 </html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anfiel>
+	<tekst>
+		Anfield je nogometni stadion u Liverpoolu. Izgrađen je 1884., 
+		te je na njemu, do 1892. igrao nogometni klub Everton FC. 
+		Od tada, Anfield je dom Liverpool FC-a. Stadion ima četiri UEFA-ine 
+		zvjezdice, te se na njemu odigravaju i mnoge međunarodne utakmice, 
+		kao i utakmice engleske nogometne reprezentacije, te se na njemu 
+		igralo i europsko prvenstvo 1996. Ranije su na Anfieldu održavana 
+		i druga sportska natjecanja, kao boksački mečevi i teniski turniri.
+		Stadion ima četiri tribine: Spion Kop (često zvan i Kop) na kojem 
+		su tradicionalno smješteni najvatreniji navijači, Main Stand, 
+		Centenary Stand i Anfield Road, te ukupno ima 45,362 sjedećih mjesta. 
+		Najviše gledatelja, čak 61,905 bilo je na utakmici FA kupa protiv 
+		Wolverhampton Wanderers 1952. godine. Među znamenitosti stadiona 
+		spadaju i dvoja vrata nazvanih prema Liverpoolovim trenerima, 
+		Bobu Paisleyu i Billu Shanklyu. Iznad vrata Billa Shanklya je 
+		atpis You'll never walk alone, ime Liverpoolove himne.
+	</tekst>
+	
+	<slike>
+		<slika1>
+			../Slike/anfield1.jpg
+		</slika1>
+		
+		<slika2>
+			../Slike/anfield2.jpg
+		</slika2>
+		
+		<slika3>
+			../Slike/anfield3.jpg
+		</slika3>
+	</slike>
+</anfiel>
+
+  

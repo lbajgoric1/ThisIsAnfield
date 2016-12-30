@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<momcad>
+	<golmani>
+		<golman>
+			<ime>
+				Loris Karius
+			</ime>
+			<tekst>
+				Loris Karijus (rođen 22 juna 1993.) je njemački nogometaš, 
+				koji trenutno igra za Liverpool. Debitovao je za 
+				FC Mainz 05 1. decembra 2012. protiv Hanovera. 
+				U 2015-2016 sezone izabran je za trećeg najboljeg golmana u Bundesligi. 
+				Za Liverpool je potpisao u maju 2016. godine.
+			</tekst>
+			<slika>
+				../Slike/loris.jpg
+			</slika>
+		</golman>
+		
+		<golman>
+			<ime>
+				Alex Manninger
+			</ime>
+			<tekst>
+				Alexander Manninger (Salzburg, 4. lipnja 1977.), 
+				austrijski nogometaš. Manninger igra za Liverpool. Za austrijsku reprezentaciju je igrao 
+				deset godina i sakupio preko 30 utakmica.
+			</tekst>
+			<slika>
+				../Slike/AlexManninger.jpg
+			</slika>
+		</golman>
+		
+		<golman>
+			<ime>
+				Simon Mignolet
+			</ime>
+			<tekst>
+				Simon Luc Hildebert Mignolet born 6 March 1988) 
+				is a Belgian professional footballer who plays as a goalkeeper for Premier League 
+				club Liverpool and the Belgium national team.
+			</tekst>
+			<slika>
+				../Slike/SimonMignolet.jpg
+			</slika>
+		</golman>
+	</golmani>
+	
+	<obrambeni>
+		<obrana>
+			<ime>
+			
+			</ime>
+			<tekst>
+			
+			</tekst>
+			<slika>
+			
+			</slika>
+		</obrana>
+	</obrambeni>
+</momcad>

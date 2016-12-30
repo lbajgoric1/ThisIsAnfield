@@ -43,9 +43,6 @@ ul.meni li a, .dropbtn {
 	font-size: 2vw;
 }
 
-ul.meni li a:hover:not(.active) {
-	background-color: #f10016;
-}
 
 ul.meni li a.active {
 	background-color: #4CAF50;
@@ -64,10 +61,6 @@ ul.meni li.right {
     text-decoration: none;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: red;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -84,7 +77,7 @@ ul.meni li.right {
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #ff0000}
 
 
 .dropdown-link {
