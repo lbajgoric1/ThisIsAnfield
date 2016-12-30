@@ -213,6 +213,20 @@ textarea.unos{
 	text-align:left;
 }
 
+#loginForma{
+	color: white;
+	float: left;
+	margin-left: 40%;
+}
+
+.loginInput{
+	float: right;
+}
+
+#prijava{
+	float: right;
+}
+
 @media screen and (max-width: 600px){
 	.red, .kolona, .sadrzaj {
 		float: none;

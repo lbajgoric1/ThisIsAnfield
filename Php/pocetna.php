@@ -49,7 +49,7 @@
 		</div>
 		
 		<div class="red">
-			Pretrazi novosti (po poljima naslov i sadrzaj):
+			Pretrazi novosti:
 			<input id="pretraga" type="text" name="pretraga" onkeyup="showResult(this.value)">
 			<input type="submit" name="pretrazi" value="Pretrazi" onclick="prikaziRezultate()">
 			<div id="livesearch"></div>

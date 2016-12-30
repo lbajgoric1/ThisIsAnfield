@@ -10,6 +10,7 @@
 		
 		<SCRIPT src="../Javascript/index.js"></SCRIPT>
 		<SCRIPT src="../Javascript/pretraga.js"></SCRIPT>
+		<SCRIPT src="../Javascript/anfield.js"></SCRIPT>
 	</head>
 	
 	<?php
@@ -28,6 +29,11 @@
 		if(isset($_POST['izmjenaNovosti']))
 		{
 			header("Location: izmjenaNovosti.php");
+		}
+		
+		if(isset($_POST['unosGolmana']))
+		{
+			header("Location: unosGolmana.php");
 		}
 		
 		if(isset($_POST['csvFajl']))
@@ -69,7 +75,7 @@
 					<a id="momcad.html" href="#" class="dropbtn" onclick="prikaziPadajuci('ddContent2')">Momčad</a>
 					<div class="dropdown-content" id="ddContent2">
 						<a class="dropdown-link" href="#" onclick="ucitajStranicu('momcad.php', 'momcad.html')"> Svi igrači </a>	
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/golmani.html', 'momcad.html')">Golmani</a>
+						<a class="dropdown-link" href="#" onclick="ucitajStranicu('golmani.php', 'momcad.html')">Golmani</a>
 						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/odbrambeni.html', 'momcad.html')">Odbrambeni </a>
 						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/vezni.html', 'momcad.html')">Vezni </a>
 						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/napadaci.html', 'momcad.html')"> Napadači</a>					  					  

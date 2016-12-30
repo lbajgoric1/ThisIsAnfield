@@ -18,7 +18,7 @@
 			<div class="kolona dva">
 				<div class="tekst">
 					
-					<form action ="action_page.php">
+					<form action ="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 						<fieldset>
 							<legend> Golmani: </legend>
 							<select id="comboGolmani" class="comboBox" onchange="golmani()">

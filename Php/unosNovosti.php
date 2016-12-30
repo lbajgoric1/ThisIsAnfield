@@ -113,7 +113,7 @@
 					
 					<div class="red">
 						<input id="nazadBtn" type="submit" value="Nazad" name="nazad" class="nazadBtn">
-						<input id="unosBtn" type="submit" value="Unesi novost" name="unesiNovost" class="akcijaBtn"> 
+						<input id="unosBtn" type="submit" value="Unesi novost" name="unesiNovost" class="akcijaBtn"> <br><br>
 						<div id="greska"><?php echo $_msg ?> </div>
 						<div id="uspjesno"><?php echo $_msg2 ?> </div>
 					</div>

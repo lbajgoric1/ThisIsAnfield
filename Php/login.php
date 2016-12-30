@@ -52,25 +52,31 @@
 			{
 				$_SESSION['loggedin'] = true;
 				$_SESSION['username'] = $_POST['username'];
-				header("Location: admin.php");
+				if ($_SESSION['username']=='admin') {
+					header("Location: admin.php");
+				}
+				
+			}
+			
+			if(isset($_POST['nazad'])){
+				header ("Location: index.php");
 			}
 		?>
 		
-		<div class="red">
-			<form id="loginForma" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="loginForma" method="post">
-				<fieldset>
-					<legend> Login: </legend>
-					Username
-					<input id="username" type="text" name="username" placeholder="Username">
-					<br> <br>
-					Password
-					<input id="password" type="password" name="password" placeholder="Password"> 
-					<br> <br>
-					<input id="prijava" type="submit" value="Prijava" name="prijava" onclick="validirajLogin()"> <br>
-					<div id="greska"> <?php echo $_msg ?></div>
-				</fieldset>
-			</form>
-		</div>
+		<form id="loginForma" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="loginForma" method="post">
+			<fieldset>
+				<legend> Login: </legend>
+				Username
+				<input id="username" type="text" name="username" placeholder="Username" class="loginInput" onkeyup="validirajLogin()">
+				<br> <br>
+				Password
+				<input id="password" type="password" name="password" placeholder="Password" class="loginInput" onkeyup="validirajLogin()"> 
+				<br> <br>
+				<input id="nazadBtn" type="submit" value="Nazad" name="nazad" class="nazadBtn">
+				<input id="prijava" type="submit" value="Prijava" name="prijava"> <br><br>
+				<div id="greska"> <?php echo $_msg ?></div>
+			</fieldset>
+		</form>
 	</body>
 
 </html>

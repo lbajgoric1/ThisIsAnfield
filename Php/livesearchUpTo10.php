@@ -8,6 +8,7 @@
 
 	//get the q parameter from URL
 	$q=$_GET["q"];
+	$brojac = 0;
 
 	//lookup all links from the xml file if length of q>0
 	if (strlen($q)>0) {
@@ -21,10 +22,18 @@
 					if ($hint=="") {
 						$hint= "<b>Naslov: </b>" . $y->item(0)->childNodes->item(0)->nodeValue . "<br />" . 
 						"<b>Sadrzaj: </b>" . $z->item(0)->childNodes->item(0)->nodeValue. "<br />";
+						$brojac++;
+						if ($brojac>=10){
+							return;
+						}
 					} else {
 						$hint=$hint . "<br />". 
 						"<b>Naslov: </b>" . $y->item(0)->childNodes->item(0)->nodeValue . "<br />" .
 						"<b>Sadrzaj: </b>" . $z->item(0)->childNodes->item(0)->nodeValue. "<br />";
+						$brojac++;
+						if ($brojac>=10){
+							return;
+						}
 					}
 				}
 			}

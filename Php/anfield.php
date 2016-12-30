@@ -12,6 +12,7 @@
 	</head>
 	
 	<?php 
+		$_msg = "";
 		function validirajXSS($_unos) 
 		{
 			$_unos = trim($_unos);
@@ -20,6 +21,9 @@
 			return $_unos;
 		}
 		
+		if(isset($_POST['dugmeSubmit'])){
+			$_msg = "lala";
+		}
 		
 	?>
 
@@ -48,24 +52,24 @@
 		
 		<div class="red">
 			<div class="kolona dva">
-				<form id="formaPoruka" action="action_page.php" class="posaljiPoruku">
+				<form id="formaPoruka" name="formaPoruka" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="posaljiPoruku" method="post">
 					<fieldset>
 						<legend> Pošalji poruku: </legend>
 						Ime i prezime:
-						<input id="imeIPrezime" type="text" name="imeIPrezime" class="unos">
+						<input id="imeIPrezime" type="text" name="imeIPrezime" class="unos" required onkeyup="validirajUnos()">
 						<br> <br>
 						Telefon: 
-						<input id="telefon" type="text" name="telefon" class="unos"> 
+						<input id="telefon" type="text" name="telefon" class="unos" required onkeyup="validirajUnos()"> 
 						<br> <br>
 						Email adresa: 
-						<input id="email" type="text" name="email" class="unos">
+						<input id="email" type="text" name="email" class="unos" required onkeyup="validirajUnos()">
 						<br> <br>
 						Sadržaj poruke:
-						<textarea id="poruka" name="sadrzaj" cols="40" rows="5" class="unos"></textarea>
+						<textarea id="poruka" name="sadrzaj" cols="40" rows="5" class="unos" required onkeyup="validirajUnos()"></textarea>
 						<br> <br>
 						<input type="reset" value="Reset" class="ponisti">
-						<input id="posalji" type="button" value="Submit" class="potvrdi" onclick="prikaziPoruku()"> <br>
-						<div id="greska"> </div>
+						<input id="posalji" name="dugmeSubmit" type="submit" value="Submit" class="potvrdi" onclick="prikaziPoruku()"> <br>
+						<div id="greska"> <?php echo $_msg; ?></div>
 					</fieldset>
 				</form>
 			</div>

@@ -6,6 +6,7 @@ function validacijaForme(){
 	
 	if(forma.imeIPrezime.value===""){
 		porukaGreske.innerHTML+="Niste unijeli ime i prezime";
+		
 		return false;
 	}
 	
@@ -51,7 +52,55 @@ function prikaziPoruku() {
 		document.getElementById('formaPoruka').reset();
 		document.getElementById('fieldSet').style.display="inline";
 	}
+}
+
+function validirajUnos(){
+	var porukaGreske = document.getElementById('greska');
+	porukaGreske.innerHTML="";
+	
+	var imeiPrezimeRegex = /[A-Za-z]+\s+['A-Za-z]+/;
+	var telefonRegEx = /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{3})$/;
+	var emailRegEx = /\S+@\S+\.\S+/;
+	
+	var forma = document.getElementById("formaPoruka");
+	
+	if(forma.imeIPrezime.value===""){
+		porukaGreske.innerHTML="Niste unijeli ime i prezime";
+		document.getElementById("posalji").disabled=true;
+	}
+	
+	else if(forma.imeIPrezime.value.length<6 || forma.imeIPrezime.value.length>30){
+		porukaGreske.innerHTML="Ime i prezime je predugo ili prekratko";
+		document.getElementById("posalji").disabled=true;
+	}
 	
 	
+	else if(!imeiPrezimeRegex.test(forma['imeIPrezime'].value)){
+		porukaGreske.innerHTML="Niste unijeli validno ime i prezime.";
+		document.getElementById("posalji").disabled=true;
+	}
+	
+	
+	else if (!telefonRegEx.test(forma['telefon'].value)) {
+		greska.innerHTML="Telefon mora imati format: (061)-123-345 ili 061-123-456 ili 061123456";  
+		document.getElementById("posalji").disabled=true;
+	}
+	
+	
+	else if (!emailRegEx.test(forma['email'].value)) {
+		greska.innerHTML="Email mora biti u formatu: naziv@provider.com";  
+		document.getElementById("posalji").disabled=true;
+	}
+	
+	else if(forma.poruka.value===""){
+		porukaGreske.innerHTML="Niste unijeli poruku";
+		document.getElementById("posalji").disabled=true;
+	}
+	
+	else {
+		porukaGreske.innerHTML="";
+		document.getElementById("posalji").disabled=false;
+		
+	}
 }
 
