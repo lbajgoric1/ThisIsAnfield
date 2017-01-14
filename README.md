@@ -20,8 +20,17 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
 - Kreirana je galerija slika koristeći JavaScript.
 - Koristeži Ajax podstranice se učitavaju bez reload-a cijele stranice.
 
+# &#x1F4D9;Spirala 3:
+- Koristeći PHP napravljena je serializaciju podataka u XML fajlove (osim podataka vezanih za odbrambene, vezne i napadače; napravljena je serijalizacija golmana te je serijalizacija drugih tipova igrača analoga toj.)
+- Adminu je omogućen unos, izmjena i brisanje novosti. Prikaz novosti je u sklopu <i>Početne</i> stranice i u sklopu brisanja novosti (listbox ispisuje sve novosti). Podaci admin-a nalaze se u xml fajlu.
+- Podaci koji se unose su validirani i u PHP-u i u JS-u, paženo je na XSS ranjivost napisanog koda.
+- Adminu je omogućen download podataka (iz XML-a) u obliku CSV fajla.
+- Omogućeno je generisanje pdf fajla na osnovu podataka iz XML-a.
+- Omogućena je pretraga novosti po poljima <i>Naslov</i> i <i>Sadržaj</i>.
+
 # &#x1F53B;Lista fajlova:
   + <b>Html folder</b> - sadrži html stranice <br>
+  + <b>Php folder</b> - sadrži php stranice <br>
   + <b>Css folder</b> - sadrži css fajlove<br>
   + <b>JavaScript folder</b> - sadrži js fajlove <br>
   + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
