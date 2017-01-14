@@ -28,6 +28,14 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
 - Omogućeno je generisanje pdf fajla na osnovu podataka iz XML-a.
 - Omogućena je pretraga novosti po poljima <i>Naslov</i> i <i>Sadržaj</i>.
 
+# &#x1F4D5;Spirala 4:
+- Napravljena je baza <i>thisisanfield</i> sa četiri povezane tabele, <i>admin, golmani, novosti i poruke</i>. Tabele <i>golmani, novosti i poruke</i> su povezane tako da novosti i poruke mogu biti u vezi jednog golmana. (Nije odrađeno za ostale igrače, ali to je samo unos u bazu svih igrača u jednu tabelu igrač umjesto golman).
+- Napravljena je skripta koja ubacuje sve podatke iz XML-a u bazu, dostupna je na klik dugmeta na stranici <i>admin.php</i> (baza je već napunjena sa tim podacima)
+- Skripte su prepravljene tako da rade sa bazom 
+- Hosting stranice na OpenShift: http://thisisanfield-php-thisisanfield.44fs.preview.openshiftapps.com/
+- Napravljena je jedna get metoda REST web servisa koja vraća sve novosti ako nije specificiran naslov novosti u suprotnom vraća novosti sa unesenim datumom 
+- Kreirana metoda je testirana u Postmanu i screenshot-ovi se nalaze u folderu <i>Postman</i>
+
 # &#x1F53B;Lista fajlova:
   + <b>Html folder</b> - sadrži html stranice <br>
   + <b>Php folder</b> - sadrži php stranice <br>
@@ -35,6 +43,7 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
   + <b>JavaScript folder</b> - sadrži js fajlove <br>
   + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
   + <b>Slike folder</b> - sadrži sve slike koje su potrebne da bi se prikazale stranice<br>
+  + <b>Postman folder</b> - sadrži screenshot-ove testiranja web servisa
   
 # &#x1F534;Bug
   + Kada se odaberu <i>Takmičenja</i> i <i>Momčad</i> stavka na meniju prikažu se oba pripadajuća padajuća menija. 
