@@ -25,7 +25,8 @@
 			$_odabranaNovost = trim($_POST['novosti']);
 			
 			try {
-				$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+				// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+				$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
 				$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
 				$data = $veza->query("select id, naslov from novosti");
@@ -99,7 +100,8 @@
 					<select id="comboNovosti" class="comboBox" name="novosti">
 						<?php
 							try {
-								$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+								// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+								$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
 								$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 								
 								$sql = 'SELECT naslov FROM novosti';
