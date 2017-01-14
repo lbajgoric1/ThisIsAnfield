@@ -33,7 +33,7 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
 - Napravljena je skripta koja ubacuje sve podatke iz XML-a u bazu, dostupna je na klik dugmeta na stranici <i>admin.php</i> (baza je već napunjena sa tim podacima)
 - Skripte su prepravljene tako da rade sa bazom 
 - Hosting stranice na OpenShift: http://thisisanfield-php-thisisanfield.44fs.preview.openshiftapps.com/
-- Napravljena je jedna get metoda REST web servisa koja vraća sve novosti ako nije specificiran naslov novosti u suprotnom vraća novosti sa unesenim datumom 
+- Napravljena je jedna get metoda REST web servisa (nalazi se u <i>webservisi.php</i>) koja vraća sve novosti ako nije specificiran naslov novosti u suprotnom vraća novosti sa unesenim datumom 
 - Kreirana metoda je testirana u Postmanu i screenshot-ovi se nalaze u folderu <i>Postman</i>
 
 # &#x1F53B;Lista fajlova:
@@ -44,6 +44,8 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
   + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
   + <b>Slike folder</b> - sadrži sve slike koje su potrebne da bi se prikazale stranice<br>
   + <b>Postman folder</b> - sadrži screenshot-ove testiranja web servisa
+  + index.php 
+  + thisisanfield.sql
   
 # &#x1F534;Bug
   + Kada se odaberu <i>Takmičenja</i> i <i>Momčad</i> stavka na meniju prikažu se oba pripadajuća padajuća menija. 
