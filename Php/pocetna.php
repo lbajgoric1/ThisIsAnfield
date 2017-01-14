@@ -72,7 +72,7 @@
 				$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
 
 				$veza->exec("set names utf8");
-				$rezultat = $veza->query("select naslov, sadrzaj, golman from Novosti");
+				$rezultat = $veza->query("select naslov, sadrzaj, golman from novosti");
 				if (!$rezultat) {
 					$greska = $veza->errorInfo();
 					print "SQL greška: " . $greska[2];
