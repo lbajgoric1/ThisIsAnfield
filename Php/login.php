@@ -42,7 +42,8 @@
 				validiraj($_POST['password']);
 				
 				try {
-					$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+					// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+					$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 					$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					
 					$data = $veza->query("select username, password from admin");

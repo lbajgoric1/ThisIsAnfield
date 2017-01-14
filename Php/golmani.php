@@ -71,7 +71,8 @@
 					// $_msg2="Uspješno ste poslali poruku.";
 					$_idGolmana = 0;
 					try {
-						$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+						// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+						$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 						$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 						$veza->exec("set names utf8");
 						
@@ -158,7 +159,8 @@
 								<select id="comboGolmani" class="comboBox" onchange="golmani()" name="golmanCombo">
 									<?php
 										try {
-											$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+											// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+											$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 											$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 											
 											$sql = 'SELECT ime FROM golmani';

@@ -39,7 +39,8 @@
 			$_naslov = $_POST['novosti'];
 			
 			try {
-				$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+				// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+				$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 				$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
 				$data = $veza->query("select id, naslov, sadrzaj from novosti where naslov = '". $_naslov ."'");
@@ -74,7 +75,8 @@
 				$_noviSadrzaj = $_POST['noviSadrzaj'];
 				
 				try {
-					$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+					// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+					$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 					$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					$sql = "UPDATE novosti SET naslov='". $_noviNaslov ."', sadrzaj='". $_noviSadrzaj ."' WHERE id='". $_idStariNaslov ."'";
 					$stmt = $veza->prepare($sql);
@@ -150,7 +152,8 @@
 						<select id="comboNovosti" class="comboBox" name="novosti">
 						<?php
 							try {
-								$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+								// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+								$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 								$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 								
 								$sql = 'SELECT naslov FROM novosti';

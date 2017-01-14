@@ -66,7 +66,8 @@
 								<select id="comboGolmani" class="comboBox" name="golman" onchange="golmani()">
 									<?php
 										try {
-											$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+											// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+											$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 											$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 											
 											$sql = 'SELECT ime FROM golmani';

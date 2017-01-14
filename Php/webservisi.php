@@ -10,7 +10,8 @@
 	}
 
 	function rest_get($request, $data){
-		$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+		// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+		$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-57-centos7", "admin", "admin"));
 		$veza->exec("set names utf8");
 		
 		if (isset($data['naslov'])){
