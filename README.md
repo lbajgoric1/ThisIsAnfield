@@ -44,8 +44,8 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
   + <b>Mockup folder</b> - sadrži skice stranica kako izgledaju na browseru odnosno mobilnom uređaju<br>
   + <b>Slike folder</b> - sadrži sve slike koje su potrebne da bi se prikazale stranice<br>
   + <b>Postman folder</b> - sadrži screenshot-ove testiranja web servisa
-  + index.php 
-  + thisisanfield.sql
+  + <b>index.php</b>
+  + <b>thisisanfield.sql</b>
   
 # &#x1F534;Bug
   + Kada se odaberu <i>Takmičenja</i> i <i>Momčad</i> stavka na meniju prikažu se oba pripadajuća padajuća menija. 
