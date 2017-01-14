@@ -41,6 +41,7 @@
 			try {
 				// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
 				$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
+
 				$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
 				$data = $veza->query("select id, naslov, sadrzaj from novosti where naslov = '". $_naslov ."'");
@@ -77,6 +78,7 @@
 				try {
 					// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
 					$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
+
 					$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					$sql = "UPDATE novosti SET naslov='". $_noviNaslov ."', sadrzaj='". $_noviSadrzaj ."' WHERE id='". $_idStariNaslov ."'";
 					$stmt = $veza->prepare($sql);
@@ -154,6 +156,7 @@
 							try {
 								// $veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
 								$veza = new PDO("mysql:dbname=thisisanfield;host=mysql-55-centos7", "admin", "admin");
+
 								$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 								
 								$sql = 'SELECT naslov FROM novosti';
