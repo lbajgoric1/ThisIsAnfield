@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <novosti>
   <novost>
+    <id>1</id>
     <naslov>Jurgen Klopp nominiran za FIFA trenera godine</naslov>
     <sadrzaj>Menadzer Liverpoola Jurgen Klopp je usao u uzi izbor za trenera FIFA nagradu godine za 2016. godine. Njemac, koji je preuzeo uzde na Anfieldu u oktobru 2015. godine, vodio je Reds u finale  Lige Kupu i Lige Evrope.</sadrzaj>
+    <golman>1</golman>
   </novost>
   <novost>
+    <id>2</id>
     <naslov>Liverpool potvrdio Danny Ings mora na operaciju koljena</naslov>
     <sadrzaj>Liverpool Football Club je potvrdio da Danny Ings mora na operaciju zbog povrede koljena usljed udara koji je zadobio u desnom koljenu tokom EFL Cupa u cetvrtom krugu, u mecu protiv Tottenham Hotspura koji je odigran prosle sedmice.</sadrzaj>
+    <golman>1</golman>
   </novost>
   <novost>
+    <id>3</id>
     <naslov>Novost3</naslov>
     <sadrzaj>Sadrzaj novosti3</sadrzaj>
+    <golman>2</golman>
   </novost>
   <novost>
+    <id>4</id>
     <naslov>Novost4</naslov>
     <sadrzaj>Sadrzaj novosti4 azuriran</sadrzaj>
+    <golman>3</golman>
   </novost>
   <novost>
-    <naslov>Senita je najljepsa</naslov>
-    <sadrzaj>MArija Serifovic is the best.&#13;
-</sadrzaj>
+    <naslov>testtest</naslov>
+    <sadrzaj>testtest</sadrzaj>
+  </novost>
+  <novost>
+    <naslov>ttttttttt</naslov>
+    <sadrzaj>ttttttttttttttt</sadrzaj>
   </novost>
 </novosti>

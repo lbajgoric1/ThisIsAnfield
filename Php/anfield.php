@@ -8,7 +8,14 @@
 		<link rel="stylesheet" type="text/css" href="../Css/meni.css">
 		<link rel="stylesheet" type="text/css" href="../Css/sadrzaj.css">
 		
+		<SCRIPT src="../Javascript/index.js"></SCRIPT>
+		<SCRIPT src="../Javascript/momcad.js"></SCRIPT>
+		<SCRIPT src="../Javascript/galerija.js"></SCRIPT>
 		<SCRIPT src="../Javascript/anfield.js"></SCRIPT>
+		<SCRIPT src="../Javascript/takmicenja.js"></SCRIPT>
+		<SCRIPT src="../Javascript/momcad.js"></SCRIPT>
+		<SCRIPT src="../Javascript/login.js"></SCRIPT>
+		<SCRIPT src="../Javascript/pretraga.js"></SCRIPT>
 	</head>
 	
 	<?php 
@@ -28,60 +35,62 @@
 	?>
 
 	<body>
-		<div class="red">
-			<div class="kolona jedan anfield">
-				<img alt="stadion" class="slika" src="<?php  $_XML = simplexml_load_file("../Xml/anfield.xml"); echo $_XML->slike->slika1; ?>">
+		<div>
+			<h1 class="naslov"> 
+				THIS IS ANFIELD
+			</h1>
+		</div>
+		<a id="linkLogin" href="login.php"> Login </a>
+		<a id="linkLogout" href="logout.php"> Logout </a>
+		<div>
+			<ul class="meni">
+				<li> <a id="pocetna.html" href="pocetna.php"> Početna </a> <li>
+				<li class="dropdown"> 
+					<a id="takmicenja.html" href="#" class="dropbtn" onclick="prikaziPadajuci('ddContent')">Takmičenja</a>
+					<div class="dropdown-content" id="ddContent">
+						<a class="dropdown-link" href="takmicenja.php">Osnovne informacije</a>
+						<a class="dropdown-link" href="sezona1415.php">2014/2015.</a>
+						<a class="dropdown-link" href="sezona1314.php">2013/2014.</a>
+					</div>
+				<li> <a id="oKlubu.html" href="oKlubu.php"> O klubu </a> <li>
+				<li class="dropdown"> 
+					<a id="momcad.html" href="#" class="dropbtn" onclick="prikaziPadajuci('ddContent2')">Momčad</a>
+					<div class="dropdown-content" id="ddContent2">
+						<a class="dropdown-link" href="momcad.php"> Svi igrači </a>	
+						<a class="dropdown-link" href="golmani.php">Golmani</a>
+						<a class="dropdown-link" href="../Html/odbrambeni.html">Odbrambeni </a>
+						<a class="dropdown-link" href="../Html/vezni.html">Vezni </a>
+						<a class="dropdown-link" href="../Html/napadaci.html"> Napadači</a>					  					  
+					</div>
+				<li>
+				<li> <a id="anfield.html" href="anfield.php"> Anfield </a> <li>
+				<li> <a id="galerija.html" href="../Html/galerija.html">Galerija slika</a> <li>
+				<li> <a id="adminOpcije" href="validacijaAdmin.php">Admin opcije</a> <li>
+			</ul>
+		</div>
+		
+		<div class="sadrzaj" id="sadrzaj">
+			<div class="red">
+				<div class="kolona jedan anfield">
+					<img alt="stadion" class="slika" src="<?php  $_XML = simplexml_load_file("../Xml/anfield.xml"); echo $_XML->slike->slika1; ?>">
+				</div>
+				
+				<div class="kolona tri anfield">
+					<div class="tekst anfield">
+						<?php echo $_XML->tekst;?>
+					</div>
+				</div>
 			</div>
 			
-			<div class="kolona tri anfield">
-				<div class="tekst anfield">
-					<?php echo $_XML->tekst;?>
+			<div class="red">
+				<div class="kolona dva">
+					<img alt="stadion" class="slika" src="<?php echo $_XML->slike->slika2;?>">
+				</div>
+				
+				<div class="kolona dva">
+					<img alt="stadion" class="slika" src="<?php echo $_XML->slike->slika3;?>">
 				</div>
 			</div>
 		</div>
-		
-		<div class="red">
-			<div class="kolona dva">
-				<img alt="stadion" class="slika" src="<?php echo $_XML->slike->slika2;?>">
-			</div>
-			
-			<div class="kolona dva">
-				<img alt="stadion" class="slika" src="<?php echo $_XML->slike->slika3;?>">
-			</div>
-		</div>
-		
-		<div class="red">
-			<div class="kolona dva">
-				<form id="formaPoruka" name="formaPoruka" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="posaljiPoruku" method="post">
-					<fieldset>
-						<legend> Pošalji poruku: </legend>
-						Ime i prezime:
-						<input id="imeIPrezime" type="text" name="imeIPrezime" class="unos" required onkeyup="validirajUnos()">
-						<br> <br>
-						Telefon: 
-						<input id="telefon" type="text" name="telefon" class="unos" required onkeyup="validirajUnos()"> 
-						<br> <br>
-						Email adresa: 
-						<input id="email" type="text" name="email" class="unos" required onkeyup="validirajUnos()">
-						<br> <br>
-						Sadržaj poruke:
-						<textarea id="poruka" name="sadrzaj" cols="40" rows="5" class="unos" required onkeyup="validirajUnos()"></textarea>
-						<br> <br>
-						<input type="reset" value="Reset" class="ponisti">
-						<input id="posalji" name="dugmeSubmit" type="submit" value="Submit" class="potvrdi" onclick="prikaziPoruku()"> <br>
-						<div id="greska"> <?php echo $_msg; ?></div>
-					</fieldset>
-				</form>
-			</div>
-		
-			<div class="kolona dva">
-				<fieldset id="fieldSet">
-					<legend> Sadržaj poruke: </legend>
-					<div id="sadrzajPoruke">
-					</div>
-				</fieldset>
-			</div>
-		</div>
-		
 	</body>
 </html>

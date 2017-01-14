@@ -1,5 +1,5 @@
 <?php
-	$_XML = simplexml_load_file("../Xml/novosti.xml");
+	// $_XML = simplexml_load_file("../Xml/novosti.xml");
 
 	$xmlDoc=new DOMDocument();
 	$xmlDoc->load("../Xml/novosti.xml");

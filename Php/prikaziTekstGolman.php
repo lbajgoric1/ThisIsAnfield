@@ -1,11 +1,13 @@
 <?php
 	$tip = $_REQUEST["tip"];
-	$_XML = simplexml_load_file('../Xml/momcad.xml');
 	
-	foreach($_XML->golmani->golman as $_g) {
-		if (trim($_g->ime)==trim($tip)){
-			echo $_g->tekst;
-		}
+	$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+	$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	$data = $veza->query("select tekst from golmani where ime = '". $tip ."'");
+	foreach ($data as $golman){
+		echo $golman['tekst'];
+	
 	}
-	
+	$veza = null;
 ?>

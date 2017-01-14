@@ -20,18 +20,35 @@
 	<?php 
 		session_start();
 		$_msg2 = "";
+		$_idNovosti = 0;
 		if (isset($_POST['obrisiNovost'])){
-			$_odabranaNovost = $_POST['novosti'];
+			$_odabranaNovost = trim($_POST['novosti']);
 			
-			$_XML = simplexml_load_file("../Xml/novosti.xml");
-			foreach($_XML->novost as $_n){
-				if (trim($_n->naslov)==trim($_odabranaNovost)){
-					$tmp = dom_import_simplexml($_n);
-                    $tmp->parentNode->removeChild($tmp);
-					$_msg2="Uspješno ste obrisali novost.";
-					$_XML->asXML('../Xml/novosti.xml');
+			try {
+				$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+				$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				
+				$data = $veza->query("select id, naslov from novosti");
+						
+				if (!$data) {
+					$greska = $veza->errorInfo();
+					print "SQL greška: " . $greska[2];
+					exit();
+				}
+				foreach ($data as $novost){
+					if (trim($novost['naslov'])==$_odabranaNovost){
+						$sql = "DELETE FROM novosti WHERE id='". $novost['id'] ."'";
+						$veza->exec($sql);
+						
+						$_msg2 = "Novost uspjesno obrisana";		
+					}
 				}
 			}
+			catch(PDOException $e){
+				echo $sql . "<br>" . $e->getMessage();
+			}
+			
+			$veza = null;
 		}
 		
 		if(isset($_POST['nazad'])){
@@ -45,32 +62,32 @@
 				THIS IS ANFIELD
 			</h1>
 		</div>
-		<a id="linkLogin" href="#" onclick="ucitajStranicu('login.php', 'linkLogin')"> Login </a>
-		<a id="linkLogout" href="../Php/logout.php"> Logout </a>
+		<a id="linkLogin" href="login.php"> Login </a>
+		<a id="linkLogout" href="logout.php"> Logout </a>
 		<div>
 			<ul class="meni">
-				<li> <a id="pocetna.html" href="#" onclick="ucitajStranicu('pocetna.php', 'pocetna.html')"> Početna </a> <li>
+				<li> <a id="pocetna.html" href="pocetna.php"> Početna </a> <li>
 				<li class="dropdown"> 
 					<a id="takmicenja.html" href="#" class="dropbtn" onclick="prikaziPadajuci('ddContent')">Takmičenja</a>
 					<div class="dropdown-content" id="ddContent">
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('takmicenja.php', 'takmicenja.html')">Osnovne informacije</a>
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('sezona1415.php', 'takmicenja.html')">2014/2015.</a>
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('sezona1314.php', 'takmicenja.html')">2013/2014.</a>
+						<a class="dropdown-link" href="takmicenja.php">Osnovne informacije</a>
+						<a class="dropdown-link" href="sezona1415.php">2014/2015.</a>
+						<a class="dropdown-link" href="sezona1314.php">2013/2014.</a>
 					</div>
-				<li> <a id="oKlubu.html" href="#" onclick="ucitajStranicu('oKlubu.php', 'oKlubu.html')"> O klubu </a> <li>
+				<li> <a id="oKlubu.html" href="oKlubu.php"> O klubu </a> <li>
 				<li class="dropdown"> 
 					<a id="momcad.html" href="#" class="dropbtn" onclick="prikaziPadajuci('ddContent2')">Momčad</a>
 					<div class="dropdown-content" id="ddContent2">
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('momcad.php', 'momcad.html')"> Svi igrači </a>	
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/golmani.html', 'momcad.html')">Golmani</a>
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/odbrambeni.html', 'momcad.html')">Odbrambeni </a>
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/vezni.html', 'momcad.html')">Vezni </a>
-						<a class="dropdown-link" href="#" onclick="ucitajStranicu('../Html/napadaci.html', 'momcad.html')"> Napadači</a>					  					  
+						<a class="dropdown-link" href="momcad.php"> Svi igrači </a>	
+						<a class="dropdown-link" href="golmani.php">Golmani</a>
+						<a class="dropdown-link" href="../Html/odbrambeni.html">Odbrambeni </a>
+						<a class="dropdown-link" href="../Html/vezni.html">Vezni </a>
+						<a class="dropdown-link" href="../Html/napadaci.html"> Napadači</a>					  					  
 					</div>
 				<li>
-				<li> <a id="anfield.html" href="#" onclick="ucitajStranicu('anfield.php', 'anfield.html')"> Anfield </a> <li>
-				<li> <a id="galerija.html" href="#" onclick="ucitajStranicu('../Html/galerija.html', 'galerija.html')"> Galerija slika </a> <li>
-				<li> <a id="adminOpcije" href="../Php/validacijaAdmin.php">Admin opcije</a> <li>
+				<li> <a id="anfield.html" href="anfield.php"> Anfield </a> <li>
+				<li> <a id="galerija.html" href="../Html/galerija.html">Galerija slika</a> <li>
+				<li> <a id="adminOpcije" href="validacijaAdmin.php">Admin opcije</a> <li>
 			</ul>
 		</div>
 		
@@ -80,16 +97,27 @@
 					<legend> Obrisi novost: </legend>
 					Naslov novosti 
 					<select id="comboNovosti" class="comboBox" name="novosti">
-							<?php 
-								$_XML = simplexml_load_file("../Xml/novosti.xml");
-								foreach($_XML->novost as $_n){
-							?>
-								<option value="<?php echo $_n->naslov; ?>"> <?php echo $_n->naslov; ?> </option>
-							<?php
+						<?php
+							try {
+								$veza = new PDO("mysql:dbname=thisisanfield;host=localhost;charset=utf8", "admin", "admin");
+								$veza->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+								
+								$sql = 'SELECT naslov FROM novosti';
+								foreach ($veza->query($sql) as $row) {
+						?>
+									<option value="<?php echo $row['naslov']; ?>"> <?php echo $row['naslov']; ?> </option>
+						<?php
 								}
-							?>
-							
-						</select>
+								
+								$veza = null;
+						?>
+						<?php
+							}
+							catch(PDOException $e){
+								echo $e->getMessage();
+							}
+						?>
+					</select>
 					
 					<div class="red">
 						<input id="nazadBtn" type="submit" value="Nazad" name="nazad" class="nazadBtn">

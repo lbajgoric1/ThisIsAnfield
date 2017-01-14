@@ -23,9 +23,9 @@ function ucitajStranicu(url, id){
 				document.getElementById("takmicenja.html").style.backgroundColor = "#4CAF50";
 				ind=1;
 			}
-			if(ind==0 && id!="linkLogin") {
-				document.getElementById(id).style.backgroundColor = "#4CAF50";
-			}
+			// if(ind==0 && id!="linkLogin") {
+				// document.getElementById(id).style.backgroundColor = "#4CAF50";
+			// }
 			
 		}
 							
