@@ -32,7 +32,7 @@ Stranica posvećena engleskom nogometnom klubu Liverpool. Sadržavat će osnovne
 - Napravljena je baza <i>thisisanfield</i> sa četiri povezane tabele, <i>admin, golmani, novosti i poruke</i>. Tabele <i>golmani, novosti i poruke</i> su povezane tako da novosti i poruke mogu biti u vezi jednog golmana. (Nije odrađeno za ostale igrače, ali to je samo unos u bazu svih igrača u jednu tabelu igrač umjesto golman).
 - Napravljena je skripta koja ubacuje sve podatke iz XML-a u bazu, dostupna je na klik dugmeta na stranici <i>admin.php</i> (baza je već napunjena sa tim podacima)
 - Skripte su prepravljene tako da rade sa bazom 
-- Hosting stranice na OpenShift: http://thisisanfield-php-thisisanfield.44fs.preview.openshiftapps.com/
+- Hosting stranice na OpenShift: http://thisisanfield-php-thisisanfield.44fs.preview.openshiftapps.com/ (u međuvremenu sam obrisala aplikaciju kako bih postavila novu, ali mi javlja error kao kod ostalih kolega. Poslala sam prijavu sa novim git nalogom, još uvijek čekam odgovor)
 - Napravljena je jedna get metoda REST web servisa (nalazi se u <i>webservisi.php</i>) koja vraća sve novosti ako nije specificiran naslov novosti u suprotnom vraća novosti sa unesenim datumom 
 - Kreirana metoda je testirana u Postmanu i screenshot-ovi se nalaze u folderu <i>Postman</i>
 
